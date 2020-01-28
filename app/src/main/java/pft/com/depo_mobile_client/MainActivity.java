@@ -9,6 +9,8 @@ import android.view.View;
 
 import pft.com.depo_mobile_client.familias.CrearFamiliaActivity;
 import pft.com.depo_mobile_client.familias.FamiliasActivity;
+import pft.com.depo_mobile_client.familias.FamiliasAdapter;
+import pft.com.depo_mobile_client.familias.FamiliasFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override
