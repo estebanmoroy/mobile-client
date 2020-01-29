@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 
+import pft.com.depo_mobile_client.familias.BorrarFamiliaActivity;
 import pft.com.depo_mobile_client.familias.CrearFamiliaActivity;
 import pft.com.depo_mobile_client.familias.FamiliasActivity;
 import pft.com.depo_mobile_client.familias.FamiliasAdapter;
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void crearFamilia(View view) {
         Intent intent = new Intent(this, CrearFamiliaActivity.class);
+        startActivity(intent);
+    }
+
+    public void borrarFamilia(View view) {
+        Intent intent = new Intent(this, BorrarFamiliaActivity.class);
         startActivity(intent);
     }
 }
