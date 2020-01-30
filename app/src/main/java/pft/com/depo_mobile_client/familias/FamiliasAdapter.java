@@ -7,20 +7,39 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import pft.com.depo_mobile_client.R;
 
 public class FamiliasAdapter extends ArrayAdapter<Familia> {
-    public FamiliasAdapter(Context context, List<Familia> objects) {
-        super(context, 0, objects);
+
+    private Context context;
+    private List<Familia> Familia;
+
+    public FamiliasAdapter(Context context, List<Familia> Familia) {
+        super(context, 0, Familia);
+        this.Familia = Familia;
+        this.context = context;
+
+    }
+
+    public int getCount() {
+        return this.Familia.size();
+    }
+
+    public long getItemId(int id) {
+        return id;
+    }
+
+    public Familia getItem(int position) {
+        return this.Familia.get(position);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Obtener inflater.
-        LayoutInflater inflater = (LayoutInflater) getContext()
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = LayoutInflater.from(this.context);
 
         // ¿Existe el view actual?
         if (null == convertView) {

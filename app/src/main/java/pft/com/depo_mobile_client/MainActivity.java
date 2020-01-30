@@ -6,11 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import pft.com.depo_mobile_client.familias.BorrarFamiliaActivity;
 import pft.com.depo_mobile_client.familias.CrearFamiliaActivity;
 import pft.com.depo_mobile_client.familias.FamiliasActivity;
+import pft.com.depo_mobile_client.familias.FamiliasAdapter;
+import pft.com.depo_mobile_client.familias.FamiliasFragment;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,4 +34,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CrearFamiliaActivity.class);
         startActivity(intent);
     }
+
+    public void borrarFamilia(View view) {
+        TextView nombre = findViewById(R.id.nombre_tv);
+
+        nombre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BorrarFamiliaActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+
 }
