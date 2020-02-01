@@ -1,142 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".familias.CrearFamiliaActivity">
 
-    <TextView
-        android:id="@+id/txtNombre"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="73dp"
-        android:text="Nombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/txtCodigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtNombre"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="64dp"
-        android:text="Codigo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Registro de Familia"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/txtDescripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtCodigo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="56dp"
-        android:text="Descripcion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCodigo" />
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"></EditText>
 
-    <TextView
-        android:id="@+id/txtIncompatible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDescripcion"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="60dp"
-        android:text="incompatible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
+        <EditText
+            android:id="@+id/editCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Codigo"></EditText>
 
-    <EditText
-        android:id="@+id/editNombre"
-        android:layout_width="179dp"
-        android:layout_height="44dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginLeft="106dp"
-        android:layout_marginTop="59dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/txtNombre"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"></EditText>
 
-    <EditText
-        android:id="@+id/editCodigo"
-        android:layout_width="179dp"
-        android:layout_height="50dp"
-        android:layout_alignStart="@+id/editNombre"
-        android:layout_alignLeft="@+id/editNombre"
-        android:layout_alignTop="@+id/txtCodigo"
-        android:layout_alignEnd="@+id/editNombre"
-        android:layout_alignRight="@+id/editNombre"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="25dp"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/txtCodigo"
-        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
+        <EditText
+            android:id="@+id/editIncopatibilidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Incompatibilidades"></EditText>
 
-    <EditText
-        android:id="@+id/editDescripcion"
-        android:layout_width="179dp"
-        android:layout_height="48dp"
-        android:layout_alignStart="@+id/editCodigo"
-        android:layout_alignLeft="@+id/editCodigo"
-        android:layout_alignTop="@+id/txtCodigo"
-        android:layout_alignEnd="@+id/editCodigo"
-        android:layout_alignRight="@+id/editCodigo"
-        android:layout_marginStart="82dp"
-        android:layout_marginLeft="82dp"
-        android:layout_marginTop="25dp"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/txtDescripcion"
-        app:layout_constraintTop_toBottomOf="@+id/editCodigo" />
-
-    <EditText
-        android:id="@+id/editIncopatibilidades"
-        android:layout_width="177dp"
-        android:layout_height="51dp"
-        android:layout_alignStart="@+id/editDescripcion"
-        android:layout_alignLeft="@+id/editDescripcion"
-        android:layout_alignTop="@+id/txtDescripcion"
-        android:layout_alignEnd="@+id/editDescripcion"
-        android:layout_alignRight="@+id/editDescripcion"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="25dp"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/txtIncompatible"
-        app:layout_constraintTop_toBottomOf="@+id/editDescripcion" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btnConfirmar"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtIncompatible"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="248dp"
-        android:layout_marginLeft="248dp"
-        android:layout_marginTop="57dp"
-        android:onClick="crearNuevaFamilia"
-        android:text="Confirmar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editIncopatibilidades" />
+        android:text="Registrar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:onClick="crearNuevaFamilia"></Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
