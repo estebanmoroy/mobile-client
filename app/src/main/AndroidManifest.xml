@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".familias.FamiliasActivity" />
         <activity android:name=".familias.CrearFamiliaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

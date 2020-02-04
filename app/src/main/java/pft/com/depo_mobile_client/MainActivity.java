@@ -2,6 +2,7 @@ package pft.com.depo_mobile_client;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< Updated upstream
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -10,6 +11,9 @@ import pft.com.depo_mobile_client.familias.CrearFamiliaActivity;
 import pft.com.depo_mobile_client.familias.FamiliasActivity;
 
 public class MainActivity extends AppCompatActivity {
+=======
+public class MainActivity extends AppCompatActivity implements NavigationHost{
+>>>>>>> Stashed changes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
