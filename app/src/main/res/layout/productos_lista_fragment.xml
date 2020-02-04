@@ -15,7 +15,7 @@
             style="@style/Widget.Depo.Toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@android:drawable/menu_frame"
+            app:navigationIcon="@drawable/menu"
             app:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 </FrameLayout>
