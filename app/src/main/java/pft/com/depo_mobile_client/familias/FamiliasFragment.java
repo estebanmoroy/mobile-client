@@ -1,14 +1,16 @@
 package pft.com.depo_mobile_client.familias;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -29,8 +31,6 @@ import pft.com.depo_mobile_client.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FamiliasFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class FamiliasFragment extends Fragment {
     ListView mFamiliasList ;
@@ -40,23 +40,11 @@ public class FamiliasFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment FamiliasFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FamiliasFragment newInstance() {
-        FamiliasFragment fragment = new FamiliasFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -64,6 +52,8 @@ public class FamiliasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_familias, container, false);
+
+        setUpToolbar(root);
 
         // Instancia del ListView.
         mFamiliasList = (ListView) root.findViewById(R.id.familias_list);
@@ -83,7 +73,11 @@ public class FamiliasFragment extends Fragment {
             URL url;
             HttpURLConnection urlConnection = null;
             try {
-                String urlServicio ="http://192.168.1.8:8090/depo-rest-api/rest/familias/";
+<<<<<<< Updated upstream
+                String urlServicio ="http://192.168.0.103:8082/depo-REST-API/rest/familias/";
+=======
+                String urlServicio ="http://192.168.1.32:8082/depo-REST-API/rest/familias/";
+>>>>>>> Stashed changes
                 url = new URL(urlServicio);
 
                 urlConnection = (HttpURLConnection) url.openConnection();
@@ -122,5 +116,19 @@ public class FamiliasFragment extends Fragment {
             // http://weblogs.java.net/blog/pat/archive/2004/10/stupid_scanner_1.html
             return new Scanner(inStream).useDelimiter("\\A").next();
         }
+    }
+
+    private void setUpToolbar(View view){
+        Toolbar toolbar = view.findViewById(R.id.app_bar_familia);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        if (activity!=null) {
+            activity.setSupportActionBar(toolbar);
+        }
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater){
+        menuInflater.inflate(R.menu.toolbar_menu, menu);
+        super.onCreateOptionsMenu(menu, menuInflater);
     }
 }

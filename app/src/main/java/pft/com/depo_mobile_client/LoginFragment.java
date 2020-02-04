@@ -13,7 +13,6 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import pft.com.depo_mobile_client.familias.FamiliasActivity;
 import pft.com.depo_mobile_client.familias.FamiliasFragment;
 import pft.com.depo_mobile_client.productos.ProductosListaFragment;
 
@@ -38,7 +37,7 @@ public class LoginFragment extends Fragment {
         }else{
           contrasenaTextInput.setError(null);
           //Navegar al siguiente Fragment
-          ((NavigationHost) getActivity()).navigateTo(new ProductosListaFragment(), false);
+          ((NavigationHost) getActivity()).navigateTo(new FamiliasFragment(), false);
         }
       }
     });
