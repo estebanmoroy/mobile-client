@@ -58,13 +58,13 @@ public class FamiliasFragment extends Fragment {
         // Instancia del ListView.
         mFamiliasList = (ListView) root.findViewById(R.id.familias_list);
 
-        ObtenerFamiliaesTask tarea = new ObtenerFamiliaesTask();
+        ObtenerFamiliasTask tarea = new ObtenerFamiliasTask();
         tarea.execute();
         // Inicializar el adaptador con la fuente de datos.
         return root;
     }
 
-    private class ObtenerFamiliaesTask extends AsyncTask<Void,Void,Boolean> {
+    private class ObtenerFamiliasTask extends AsyncTask<Void,Void,Boolean> {
         private ArrayAdapter<Familia> mFamiliasAdapter;
 
         @Override
