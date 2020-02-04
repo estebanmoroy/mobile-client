@@ -1,11 +1,4 @@
 <resources>
-<<<<<<< Updated upstream
-    <string name="app_name">depo-mobile-client</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
-=======
     <string name="app_name">DEPO</string>
     <string name="app_producto_name">Productos</string>
     <string name="app_familia_name">Familias</string>
@@ -26,4 +19,3 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
->>>>>>> Stashed changes

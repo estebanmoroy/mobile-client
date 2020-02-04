@@ -5,11 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.view.View;
-import pft.com.depo_mobile_client.familias.CrearFamiliaActivity;
-import pft.com.depo_mobile_client.familias.FamiliasActivity;
-
 public class MainActivity extends AppCompatActivity implements NavigationHost{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
