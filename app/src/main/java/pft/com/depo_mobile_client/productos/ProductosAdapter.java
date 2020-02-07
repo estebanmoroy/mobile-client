@@ -55,7 +55,7 @@ public class ProductosAdapter extends ArrayAdapter<Producto> {
         TextView familia = (TextView) convertView.findViewById(R.id.p_familias_tv);
         TextView stockTotal = (TextView) convertView.findViewById(R.id.p_stockTotal_tv);
 
-        // Familia actual.
+        // Producto actual.
         Producto Producto = getItem(position);
 
         // Setup.

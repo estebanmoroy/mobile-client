@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DEPO</string>
+    <string name="app_lote_name">Lotes</string>
     <string name="app_producto_name">Productos</string>
     <string name="app_familia_name">Familias</string>
     <string name="depo_hint_usuario">Usuario</string>
@@ -7,7 +8,7 @@
     <string name="depo_button_login">Ingresar</string>
     <string name="depo_button_siguiente">Siguiente</string>
     <string name="depo_button_cancelar">Cancelar</string>
-    <string name="depo_error_login">Nombre de usuario o contraseña err´oneos</string>
+    <string name="depo_error_login">Nombre de usuario o contraseña erróneos</string>
     <string name="depo_buscar_title">Buscar</string>
     <string name="depo_producto_titulo">Title</string>
     <string name="depo_producto_descripcion">Secondary text</string>

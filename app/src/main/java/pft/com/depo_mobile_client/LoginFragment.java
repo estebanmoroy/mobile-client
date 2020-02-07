@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import pft.com.depo_mobile_client.familias.FamiliasFragment;
+import pft.com.depo_mobile_client.lotes.LotesListaFragment;
 import pft.com.depo_mobile_client.productos.ProductosListaFragment;
 
 public class LoginFragment extends Fragment {
